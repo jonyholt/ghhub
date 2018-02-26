@@ -1,4 +1,10 @@
 //== Class definition
+
+var express = require('express');
+var passport = require('passport');
+var router = express.Router();
+var ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn();
+var request = require('request');
 var Dashboard = function() {
 
     //== Sparkline Chart helper function
@@ -1490,7 +1496,7 @@ var Dashboard = function() {
         if ($('#m_calendar').length === 0) {
             return;
         }
-        
+
         var todayDate = moment().startOf('day');
         var YM = todayDate.format('YYYY-MM');
         var YESTERDAY = todayDate.clone().subtract(1, 'day').format('YYYY-MM-DD');
@@ -1515,7 +1521,7 @@ var Dashboard = function() {
                     className: "m-fc-event--light m-fc-event--solid-warning"
                 },
                 {
-                    title: 'Conference',                    
+                    title: 'Conference',
                     description: 'Lorem ipsum dolor incid idunt ut labore',
                     start: moment('2017-08-29T13:30:00'),
                     end: moment('2017-08-29T17:30:00'),
@@ -1534,7 +1540,7 @@ var Dashboard = function() {
                     className: "m-fc-event--danger m-fc-event--solid-focus"
                 },
                 {
-                    title: 'Reporting',                    
+                    title: 'Reporting',
                     description: 'Lorem ipsum dolor incid idunt ut labore',
                     start: moment('2017-09-03T13:30:00'),
                     end: moment('2017-09-04T17:30:00'),
