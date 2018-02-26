@@ -1,0 +1,2 @@
+This software is licensed under the same proprietary license as WHMCS.
+Please see http://www.whmcs.com/license/

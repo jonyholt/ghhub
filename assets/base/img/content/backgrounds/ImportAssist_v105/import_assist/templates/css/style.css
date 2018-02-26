@@ -1,0 +1,267 @@
+/**
+ * Import Assist Stylesheet
+ *
+ * @project   WHMCS
+ * @cssdoc    version 1.0-pre
+ * @package   WHMCS
+ * @author    WHMCS Limited <development@whmcs.com>
+ * @copyright Copyright (c) WHMCS Limited 2005-2015
+ * @license   http://www.whmcs.com/license/
+ * @link      http://www.whmcs.com/
+ */
+
+/**
+ * -------------------------
+ * @section Global Layout
+ * -------------------------
+ */
+
+ .import-assist {
+    margin: 0 auto 40px auto;
+    max-width: 800px;
+}
+.import-assist .title-bar {
+    font-size: 1.1em;
+    padding: 8px;
+    background-color: #64b351;
+    color: #fff;
+    border-radius: 4px 4px 0 0;
+}
+.import-assist .content-box {
+    padding: 30px 15px 15px 15px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-top: 0;
+}
+.import-assist .footer-bar {
+    font-size: 1.1em;
+    padding: 8px;
+    background-color: #efefef;
+    border: 1px solid #ccc;
+    border-top: 0;
+    color: #fff;
+    border-radius: 0 0 4px 4px;
+    text-align: right;
+}
+
+.import-assist .alert {
+    margin: 0;
+    padding: 8px 15px;
+    border: 0;
+    border-left: 5px solid;
+    border-radius: 0;
+}
+
+.import-assist .sub-heading {
+    height: 0;
+    border-top: 1px solid #DDD;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.import-assist .sub-heading span {
+    display: inline-block;
+    position: relative;
+    padding: 0 17px;
+    top: -11px;
+    color: #555;
+    background-color: #fff;
+}
+
+.import-assist .text-bold {
+    font-weight: bold;
+}
+
+/**
+ * -------------------------
+ * @section Steps
+ * -------------------------
+ */
+
+.import-assist-steps {
+    float: right;
+    margin-top: -30px;
+    height: 80px;
+    width: 400px;
+}
+.import-assist-steps ul {
+    display: block;
+    list-style: none;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+.import-assist-steps li {
+    display: block;
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding-left: 0;
+}
+.import-assist-steps li .step {
+    background: #B2B5B9;
+    color: #fff;
+    display: inline;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 7px 13px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    line-height: normal;
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    transition: all .1s linear 0s;
+}
+.import-assist-steps li .title {
+    color: #bfbfbf;
+    display: block;
+    font-size: 13px;
+    line-height: 15px;
+    max-width: 100%;
+    position: relative;
+    table-layout: fixed;
+    text-align: center;
+    top: 13px;
+    word-wrap: break-word;
+    z-index: 104;
+}
+.import-assist-steps li.active .step {
+    background: #fff;
+    color: #1A4D80;
+    font-weight: 700;
+    padding: 7px 13px;
+    font-size: 15px;
+    border-radius: 50%;
+    border: 3px solid #1A4D80;
+}
+.import-assist-steps li.active .title {
+    color: #1A4D80;
+}
+.import-assist-steps .bar {
+    position: absolute;
+    margin-top: 10px;
+    right: 80px;
+    width: 300px;
+    height: 4px;
+    background-color: #1A4D80;
+}
+
+/**
+ * -------------------------
+ * @section Form Styling
+ * -------------------------
+ */
+
+.import-assist .prepend-icon {
+    top: 0;
+    left: 0;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    width: 100%;
+    font-weight: normal;
+}
+.import-assist .field-label {
+    text-align: right;
+    padding-top: 8px;
+    font-size: 0.9em;
+    color: #888;
+}
+.import-assist .field {
+    position: relative;
+    padding: 0 10px;
+    vertical-align: top;
+    border: 1px solid #DDD;
+    display: -moz-inline-stack;
+    display: inline-block;
+    color: #888;
+    outline: none;
+    background: #fff;
+    height: 36px;
+    width: 100%;
+    font-size: 13px;
+}
+.import-assist .field:focus {
+    border-color: #ddd;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+.import-assist .has-error,
+.import-assist .has-error:focus {
+    border: 1px solid #a94442;
+    background-color: #f2dede;
+    color: #a94442;
+}
+.import-assist .prepend-icon .field {
+    padding-left: 50px;
+}
+.import-assist .prepend-icon .field-icon i {
+    position: relative;
+    font-size: 14px;
+}
+.import-assist .prepend-icon .field-icon {
+    top: 0;
+    z-index: 4;
+    width: 34px;
+    height: 24px;
+    color: inherit;
+    line-height: 24px;
+    position: absolute;
+    text-align: center;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    pointer-events: none;
+    border-right: 1px solid #ddd;
+    margin: 6px 0 6px 4px;
+}
+.import-assist .field-icon i {
+    color: #bbb;
+}
+.import-assist .field[disabled],
+.import-assist .field[readonly] {
+    background-color: #f8f8f8;
+    opacity: 1;
+}
+
+/**
+ * -------------------------
+ * @section Requirements
+ * -------------------------
+ */
+
+.import-assist ul.requirements {
+    margin: 0;
+    padding: 0 0 0 20px;
+    list-style: none;
+}
+.import-assist ul.requirements i {
+    padding-right: 20px;
+}
+.import-assist ul.requirements li.text-fail {
+    padding-left: 40px;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+/**
+ * -------------------------
+ * @section Process Output
+ * -------------------------
+ */
+
+.import-assist .detailed-results {
+    margin: 0 auto 30px;
+    padding: 10px;
+    width: 500px;
+    height: 240px;
+    background-color: #444;
+    color: #ccc;
+    border: 1px solid #222;
+    overflow: auto;
+    word-wrap: break-word;
+}
